@@ -7,6 +7,7 @@ function App() {
     //? JSX
     <div className="App">
       <h1> merhaba react</h1>
+      
     </div>
   );
 }
