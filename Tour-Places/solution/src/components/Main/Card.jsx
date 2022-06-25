@@ -4,7 +4,7 @@ const Card = (data) => {
     console.log("ne geliyo", data);
     const {id,title,image,desc} = data;
     return(
-        <div className="cards">
+        <div className="cards" key ={id}>
             <div className="title">
                 <h1>{title}</h1>
             </div>
