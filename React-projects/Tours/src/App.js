@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Tours from './Tours'
-// ATTENTION!!!!!!!!!!
-// I SWITCHED TO PERMANENT DOMAIN
+
+//  =============   API UYGULAMASI ==============
 const url = 'https://course-api.com/react-tours-project'
 
 function App() {

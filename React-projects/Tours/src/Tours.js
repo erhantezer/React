@@ -4,11 +4,13 @@ import Tour from './Tour';
 //? tours ve remove propslarını aldık
 const Tours = ({ tours, removeTour }) => {
   return (
+
     //? Tours main içinde section oluşturdu
     <section>
     <div className='title'>
       <h1>Ours Tours</h1>
       <div className='underline'></div>
+
       <div>
         //? map le tours un içine girerek parçalayıp Tour dosyasına gönderdik
         {tours.map((tour)=>{
@@ -19,6 +21,7 @@ const Tours = ({ tours, removeTour }) => {
           )
         })}
       </div>
+      
     </div>
     </section>
   )
