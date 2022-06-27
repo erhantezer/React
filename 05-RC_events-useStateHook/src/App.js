@@ -1,6 +1,6 @@
 import Counter from "./2-classComponent/Counter";
 import Events from "./1-event-intro/Events";
-import UseStateExample from "./3-hooksState/UseStateExample";
+import UseStateExample from "./components/3-hooksState/UseStateExample";
 
 function App() {
   return (
