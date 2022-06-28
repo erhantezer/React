@@ -3,12 +3,13 @@ import { useState } from "react";
 const FormObject = () => {
 
 const [formValues, setFormValues] = useState({
+  
     username:"",
     email: "",
     password: ""
 })
 
-
+// console.log(formValues)
 
 // const handleUsername = (e) =>{
 //   // console.log(e.target);
@@ -27,7 +28,7 @@ const handleSubmit = (e) => {
 }
 
 const handleFormValues = (e) => {
-// console.log(e.target.id);
+console.log(e.target);
 setFormValues({...formValues,[e.target.id]: e.target.value})
 
 }
@@ -36,7 +37,7 @@ setFormValues({...formValues,[e.target.id]: e.target.value})
     <div>
       <form style={{ margin: '5rem' }} className="d-flex flex-column" onSubmit={handleSubmit}>
         <div className="mb-3">
-          <label htmlFor="username" className="form-label">Username: <span className="text-warning">{formValues.username}</span>
+          <label htmlFor="username" className="form-label">Username: <span className="text-warning">{formValues["username"]}</span>
            
           </label>
           <input type="text" className="form-control" id="username" onChange={handleFormValues} />

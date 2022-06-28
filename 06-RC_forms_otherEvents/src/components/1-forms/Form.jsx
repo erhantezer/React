@@ -8,22 +8,27 @@ const [password,setPassword] = useState("")
 
 
 const handleUsername = (e) =>{
-  // console.log(e.target);
+  console.log(e.target);
   setUsername(e.target.value)
 }
 
 const handleSubmit = (e) => {
-  // e.preventDefault();
-  alert(
+  e.preventDefault();
+  if(email !== "" && password !== "" && username !== "") {
+ alert(
   ` username: ${username}
     email: ${email}
     password: ${password}
     `
   )
-  setEmail("");
-  setPassword("");
-  setPassword("");
-  // e.target.reset();
+  }else{
+    alert("new enter")
+  }
+ 
+  // setEmail("");
+  // setPassword("");
+  // setPassword("");
+  e.target.reset();
 }
   return (
     <div>
@@ -36,7 +41,7 @@ const handleSubmit = (e) => {
         </div>
         <div className="mb-3">
           <label htmlFor="email" className="form-label">
-            Email address <span className="text-danger">{email}</span>
+            Email address: <span className="text-danger">{email}</span>
           </label>
           <input type="email" className="form-control" id="email" onChange={(e)=> setEmail(e.target.value)} />
         </div>

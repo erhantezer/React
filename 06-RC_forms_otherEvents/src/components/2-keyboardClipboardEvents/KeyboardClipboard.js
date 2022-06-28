@@ -17,6 +17,20 @@ e.target.value = e.target.value.toUpperCase()
 }
 
 
+const handleAreaPaste = (e) => {
+  e.target.value += e.clipboardData.getData("text").toLowerCase();
+  e.target.style.border = "3px solid red";
+  e.target.style.backgroundColor = "lightgreen";
+
+  e.preventDefault();
+}
+const handleAreaChange = (e) => {
+  if(!e.target.value){
+    e.target.style.border = "1px solid black";
+    e.target.style.backgroundColor = "transparent";
+  }
+}
+
   return (
     <div className="container text-center">
       <h2>CLIBOARD EVENTS</h2>
@@ -25,8 +39,13 @@ e.target.value = e.target.value.toUpperCase()
       // onChange={(e) => setInputValue(e.target.value.toUpperCase())}
       onKeyDown={handleKeyDown}
       />
+      <p className="text-start m-4" onCopy={() => alert("dikat copyalandı")}>{inputValue}</p>
 
-      <p className="text-start m-4">{inputValue}</p>
+      <textarea name="area" id="area" cols="50" rows="10" 
+      onPaste={handleAreaPaste}
+      onChange={handleAreaChange}>
+    
+      </textarea>
 
     </div>
   )
