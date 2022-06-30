@@ -28,11 +28,11 @@ console.log(users);
     <div>
         <h1 className='mb-5 display-4'>USER LIST</h1>
         {/* <button className='btn btn-info' onClick={getUsers}>Get Users</button> */}
-        <div className="container gap-5 ">
-            <div className="row gap-5 justify-content-center">
+        <div className="container">
+            <div className="row gap-2 justify-content-center">
                 {users && users.map((item,index) => {
                     return(
-                        <div className='col col-md-6 col-lg-3   bg-warning rounded'>
+                        <div className='col col-m-6 col-lg-3   bg-warning rounded'>
                        <img className="rounded-circle mt-3" src = {`https://i.pravatar.cc/300?img=${index}`} alt="" />
                         <h2>{item.name}</h2>
                         <h4>{item.username}</h4>
