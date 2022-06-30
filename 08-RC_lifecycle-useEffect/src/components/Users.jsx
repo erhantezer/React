@@ -14,7 +14,7 @@ useEffect(() => {
 getUsers();
 }, [])
 
-console.log(users);
+// console.log(users);
 // console.log(data);
 
 // setUsers([...data,{name,username,email}])
@@ -32,8 +32,8 @@ console.log(users);
             <div className="row gap-2 justify-content-center">
                 {users && users.map((item,index) => {
                     return(
-                        <div className='col col-m-6 col-lg-3   bg-warning rounded'>
-                       <img className="rounded-circle mt-3" src = {`https://i.pravatar.cc/300?img=${index}`} alt="" />
+                        <div key={index} className='col col-m-6 col-lg-4 col-xl-3   bg-warning rounded'>
+                       <img  className="rounded-circle mt-3 w-50" src = {`https://i.pravatar.cc/300?img=${index}`} alt="" />
                         <h2>{item.name}</h2>
                         <h4>{item.username}</h4>
                         <h6>{item.email}</h6>
