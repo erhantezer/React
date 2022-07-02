@@ -13,10 +13,11 @@ const url = "https://cw-axios-example.herokuapp.com/api/tutorials";
 const getTutorials = async () => {
   try{
     const {data} = await axios.get(url);
- setTutorials(data);
+    setTutorials(data);
   }catch(error){
     console.log(error);
   }
+  
 };
 
 //!  sadece component mount olduğunda istek yapar
@@ -24,9 +25,15 @@ useEffect(() => {
 getTutorials()
 },[])
 
+
 //! Post (create)
-const addTutorial = (tutorial) => {
-console.log("add");
+const addTutorial = async (tutorial) => {
+  try{
+    await axios.post(url,tutorial)
+  }catch(error){
+    console.log(error);
+  }
+  getTutorials()
 }
 
   return (

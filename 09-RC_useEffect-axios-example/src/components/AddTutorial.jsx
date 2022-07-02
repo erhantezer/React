@@ -7,6 +7,9 @@ const AddTutorial = ({addTutorial}) => {
   const handleSubmit = (e) => {
 e.preventDefault();
 addTutorial({title:title, description:desc})
+setTitle("");
+setDesc("");
+
   };
 
   return (
