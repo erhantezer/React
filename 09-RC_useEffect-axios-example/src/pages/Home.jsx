@@ -36,10 +36,13 @@ const addTutorial = async (tutorial) => {
   getTutorials()
 }
 
+const deleteTutorial = () => {
+
+}
   return (
     <>
       <AddTutorial addTutorial={addTutorial}/>
-      <TutorialList tutorials ={tutorials}/>
+      <TutorialList tutorials ={tutorials} deleteTutorial={deleteTutorial}/>
     </>
   );
 };
