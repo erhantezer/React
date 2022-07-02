@@ -36,13 +36,37 @@ const addTutorial = async (tutorial) => {
   getTutorials()
 }
 
-const deleteTutorial = () => {
-
+//! DELETE (delete)
+const deleteTutorial = async (id) => {
+  try{
+    await axios.delete(`${url}/${id}`)
+  }catch(error){
+    console.log(error);
+  }
+getTutorials()
 }
+
+//! Update (PUT,PATCH :Partially Update)
+const editTutorial = async (id,title, desc) => {
+
+const filtered=  tutorials.filter((tutor) => tutor.id === id).map(() =>({
+  title:title,
+  description:desc
+}))
+console.log(filtered);
+try {
+  await axios.put(`${url}/${id}`,filtered[0]);
+
+} catch (error) {
+  console.log(error);
+}
+getTutorials()
+}
+
   return (
     <>
       <AddTutorial addTutorial={addTutorial}/>
-      <TutorialList tutorials ={tutorials} deleteTutorial={deleteTutorial}/>
+      <TutorialList tutorials ={tutorials} deleteTutorial={deleteTutorial} editTutorial={editTutorial}/>
     </>
   );
 };
