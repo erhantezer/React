@@ -15,15 +15,16 @@ const handleValue = (e) => {
   console.log(e.target.value);
 }
 
+
 const handleSubmit = (e)=>{
-  e.preventDefault();
-  const {username,email,password}=formvalue
- alert(`
- username:${username}
- email:${email}
- password:${password}
- `)
- setformValue({email:"",username:"",password:""})
+e.preventDefault();
+const {username,email,password}=formvalue
+alert(`
+username:${username}
+email:${email}
+password:${password}
+`)
+setformValue({email:"",username:"",password:""})
 }
 
 

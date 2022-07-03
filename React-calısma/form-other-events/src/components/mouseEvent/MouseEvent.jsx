@@ -11,11 +11,13 @@ const MouseEvent = () => {
   const [coordX, setCoordX] = useState();
   const [coordY, setCoordY] = useState();
 
+
 const handleDoubleClick = (e) => {
   setToggle(!toggle);
   toggle ? (e.target.className="bg-warning text-light w-50 p-4 mt-4" )
   : (e.target.className="bg-success text-light w-50 p-4 mt-4")
 }
+
 
 
 const handleMove = (e) => {
@@ -24,8 +26,10 @@ setCoordY(e.pageY)
 console.log(e);
 }
 
-  return (
-    <div className='container text-center d-flex flex-column align-items-center mt-4'>
+
+
+return (
+  <div className='container text-center d-flex flex-column align-items-center mt-4'>
     <h2 className="text-danger mt-4">MOUSE EVENTS</h2>
 
     <div 
@@ -57,12 +61,12 @@ console.log(e);
 
 
     <p className='text-info fs-2'>X and Y</p>
-      <p className="text-danger fw-bold">
-        {coordX} {coordY}
-      </p>
+    <p className="text-danger fw-bold">
+    {coordX} {coordY}
+    </p>
 
-    </div>
-  )
+  </div>
+)
 }
 
 export default MouseEvent

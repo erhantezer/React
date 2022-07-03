@@ -5,10 +5,12 @@ const KeyboardEvent = () => {
 const [input,setInput] = useState("")
 
 
+
 const handleChange = (e)=>{
    setInput(e.target.value)
   
 }
+
 
 
 const handlePaste=(e)=>{
@@ -17,6 +19,7 @@ e.target.style.border = '3px solid red';
 e.target.style.backgroundColor = 'lightgreen';
 e.preventDefault();
 }
+
 
 const handleAreaChange = (e)=>{
   if(!e.target.value) {
@@ -50,8 +53,8 @@ const handleAreaChange = (e)=>{
            onPaste={handlePaste}
            onChange={handleAreaChange}
            >
-           
           </textarea>
+          
     </div>
   )
 }

@@ -6,10 +6,12 @@ const [email, setEmail] = useState("");
 const [password, setPassword] =useState("");
 
 
+
 const handleEmail=(e)=>{
     setEmail(e.target.value)
     console.log(e.target.value);
 }
+
 
 const handleSubmit =(e)=>{
     e.preventDefault()
@@ -22,6 +24,7 @@ const handleSubmit =(e)=>{
     setUsername("")
     setPassword("")
 }
+
 
     return (
         <div className='container text-center m-5 w-50 bg-warning p-5 border border-danger border-5 rounded-pill '>
@@ -66,6 +69,7 @@ const handleSubmit =(e)=>{
                 </div>
 
                 <button type="submit" className="btn btn-primary">Submit</button>
+
             </form>
         </div>
     )
