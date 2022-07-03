@@ -1,0 +1,10 @@
+@import './variables';
+header {
+  border-radius: 50px;
+    background-color: $pink;
+    padding: 3rem;
+    .title {
+      text-align: center;
+      color: azure;
+    }
+  }
