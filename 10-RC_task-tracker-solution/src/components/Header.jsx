@@ -1,5 +1,13 @@
+import AddTaskForm from './AddTaskForm';
+
 const Header = () => {
-  return <header>Header</header>;
+
+  
+  return (
+  <header>
+    <AddTaskForm/>
+  </header>
+  )
 };
 
 export default Header;
