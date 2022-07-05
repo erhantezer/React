@@ -14,6 +14,7 @@ const App = () => {
       <TomatoButton primary>Click</TomatoButton>
       <HeaderText color='white'>STYLED COMPONENTS</HeaderText>
       <StyledLink href='https://clarusway.com/' target='_blank'>Clarusway</StyledLink>
+      <StyledLink secondary href='https://clarusway.com/' target='_blank'>Clarusway</StyledLink>
       </Container>
     
   )
