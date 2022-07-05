@@ -1,7 +1,7 @@
-import Button, { TomatoButton } from "./Button.styled";
-import Container from "./Container.styled";
-import HeaderText from "./Header.style";
-import StyledLink from "./Link.styled";
+import Button, { TomatoButton } from "./components/Button.styled";
+import Container from "./components/Container.styled";
+import HeaderText from "./components/Header.style";
+import StyledLink from "./components/Link.styled";
 
 const App = () => {
   return (
