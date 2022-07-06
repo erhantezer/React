@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Instructors = () => {
-
+ const navigate = useNavigate()
   const [instructors, setInstructors] = useState([]);
 
   const getInstructors = () => {
@@ -21,7 +22,11 @@ const Instructors = () => {
         {instructors?.map((inst) => {
           const { id, name } = inst;
           return (
-            <div className="col-sm-12 col-md-6 col-lg-4" key={id}>
+            <div className="col-sm-12 col-md-6 col-lg-4" 
+            key={id}
+            onClick={()=>navigate(`/instructors/${id}`)}
+            // onClick={()=>navigate(`/instructors/${id}`, {state:inst})}
+            >
               <img
                 src={`https://avatars.dicebear.com/v2/avataaars/${id}.svg`}
                 alt=""
