@@ -1,6 +1,7 @@
 const Nav = () => {
   return (
     <div>
+
       <ul className="container d-flex justify-content-around mt-4">
         <li>
           <a href="/">Home</a>
@@ -12,6 +13,7 @@ const Nav = () => {
           <a href="/contact">Contact</a>
         </li>
       </ul>
+      
     </div>
   );
 };
