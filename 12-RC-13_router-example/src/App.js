@@ -6,7 +6,8 @@ import Instructors from './pages/Instructors';
 import NotFound from './pages/NotFound';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import InstructorsDetail from './pages/InstructorsDetail';
-import {Navigate} from 'react-router-dom'
+import {Navigate} from 'react-router-dom';
+import Paths from './pages/Paths'
 
 
 
@@ -19,6 +20,8 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/instructors/:id' element={<InstructorsDetail />} />
         <Route path='/instructors' element={<Instructors />} />
+
+        <Route path='/paths' element={<Paths />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='*' element={<NotFound />} />
         <Route path='/deneme' element={<Navigate to='/' />} />
