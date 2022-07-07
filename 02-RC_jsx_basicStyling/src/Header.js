@@ -1,3 +1,4 @@
+
 function Header() {
   return (
     <header>
@@ -7,6 +8,7 @@ function Header() {
 }
 
 export default Header;
+
 
 //* Harici bir dosya icersinde olusturulan bir component
 //* export default ile proje icerisinde herhangi bir yerde

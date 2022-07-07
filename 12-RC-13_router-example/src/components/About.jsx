@@ -1,4 +1,5 @@
 const About = () => {
+  
   return (
     <article className="container p-3">
       <h1 className="text-center">ABOUT US</h1>
