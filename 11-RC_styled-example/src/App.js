@@ -10,6 +10,7 @@ const theme = {
   },
   responsive: '768px',
 };
+
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
