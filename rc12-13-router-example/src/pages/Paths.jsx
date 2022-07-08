@@ -13,6 +13,7 @@ const Paths = () => {
         FOR YOU Upgrade your career with the best online training led by top IT
         experts!
       </p>
+
       <div>
         <Link className="btn btn-success w-50" to="fullstack">
           Fullstack
@@ -21,6 +22,8 @@ const Paths = () => {
           Aws-Devops
         </Link>
       </div>
+      //! outlet olunca ve app.jsx te  index olarak yazılırsa paths
+      //! sayfası açılınca fullstack sayfası gelecektir gelecektir
       <Outlet />
     </div>
   );
