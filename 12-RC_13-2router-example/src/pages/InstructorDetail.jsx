@@ -51,6 +51,7 @@ const InstructorDetail = () => {
         <h4>{inst.email}</h4>
         <h4>{inst.phone}</h4>
         <div>
+          
           <button
             onClick={() => navigate('/')}
             className="btn btn-success me-2"
@@ -61,7 +62,7 @@ const InstructorDetail = () => {
           <button onClick={() => navigate(-1)} className="btn btn-warning">
             Go Back
           </button>
-          
+
         </div>
       </div>
     );
