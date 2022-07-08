@@ -10,9 +10,11 @@ const Aws = () => {
         src="https://clarusway.com/wp-content/uploads/elementor/thumbs/Aws-Solution-Architech-1-pmxc3z6r0ibsy5uixyzfrgrdilrq8nu5yid937d8w8.jpg"
         alt=""
       />
+
       <div>
         <button className="btn btn-outline-warning mt-4">Learn More</button>
       </div>
+      
     </div>
   );
 };
