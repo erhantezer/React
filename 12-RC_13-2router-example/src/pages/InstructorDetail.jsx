@@ -57,9 +57,11 @@ const InstructorDetail = () => {
           >
             Home
           </button>
+
           <button onClick={() => navigate(-1)} className="btn btn-warning">
             Go Back
           </button>
+          
         </div>
       </div>
     );

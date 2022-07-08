@@ -11,9 +11,11 @@ const FullStack = () => {
         src="https://clarusway.com/wp-content/uploads/elementor/thumbs/v1-Fullstack-developer-pqnf31gbxlt9gholzgwtsxya1abhwiwulezoqna3wo.jpg"
         alt=""
       />
+
       <div>
         <button className="btn btn-outline-success mt-4">Learn More</button>
       </div>
+      
     </div>
   );
 };
