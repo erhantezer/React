@@ -25,6 +25,7 @@ const StyledFooter = styled.footer`
     p {
       text-align: center;
     }
+    
   }
 `;
 export default StyledFooter;
