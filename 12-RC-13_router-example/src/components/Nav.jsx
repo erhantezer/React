@@ -36,6 +36,7 @@ function Nav() {
             >
               Instructors
             </NavLink>
+
             <li className="nav-item">
               <NavLink
                 style={({ isActive }) => ({ color: isActive && "red" })}
@@ -45,6 +46,7 @@ function Nav() {
                 Contact
               </NavLink>
             </li>
+
             <li className="nav-item">
               <NavLink
                 style={({ isActive }) => ({ color: isActive && "red" })}
@@ -54,6 +56,7 @@ function Nav() {
                 Contact
               </NavLink>
             </li>
+            
           </ul>
         </div>
       </div>
