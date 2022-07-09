@@ -54,8 +54,7 @@ const InstructorDetail = () => {
           
           <button
             onClick={() => navigate('/')}
-            className="btn btn-success me-2"
-          >
+            className="btn btn-success me-2">
             Home
           </button>
 

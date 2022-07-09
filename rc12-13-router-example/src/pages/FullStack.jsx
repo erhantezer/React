@@ -3,6 +3,7 @@ const FullStack = () => {
   return (
     <div className="mt-4 text-center">
       <h1 className="display-6 text-success">Full Stack Path</h1>
+      
       <p>
         Become a software and application developer, well-equipped with both
         front-end and back-end.
