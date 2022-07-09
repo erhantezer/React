@@ -21,7 +21,9 @@ const Contact = () => {
   return (
     <div className="container">
       <h1 className="text-center mt-4">CONTACT FORM</h1>
+
       <form onSubmit={(e) => handleSubmit(e)}>
+
         <div className="mb-3">
           <label htmlFor="username" className="form-label">
             Username
@@ -36,6 +38,7 @@ const Contact = () => {
             onChange={handleFormValues}
           />
         </div>
+
         <div className="mb-3">
           <label htmlFor="email" className="form-label">
             Email
@@ -65,10 +68,13 @@ const Contact = () => {
             onChange={handleFormValues}
           />
         </div>
+
         <div className="text-center">
           <button className="btn btn-danger mb-4">Submit</button>
         </div>
+        
       </form>
+
     </div>
   );
 };
