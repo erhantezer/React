@@ -39,9 +39,11 @@ function App() {
 
           {/* Nested Route */}
           <Route path="paths" element={<Paths />}>
+
             <Route index element={<FullStack />} />
             <Route path="fullstack" element={<FullStack />} />
             <Route path="aws" element={<Aws />} />
+            
           </Route>
 
           <Route path="contact" element={<PrivateRouter />}>

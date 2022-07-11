@@ -16,6 +16,7 @@ const theme = {
 };
 const App = () => {
   return (
+
     <ThemeProvider theme={theme}>
       <GlobalStlyes />
       <Header />
@@ -26,6 +27,7 @@ const App = () => {
       </Container>
       <Footer />
     </ThemeProvider>
+    
   );
 };
 
