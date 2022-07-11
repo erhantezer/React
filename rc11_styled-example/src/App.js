@@ -20,14 +20,18 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <GlobalStlyes />
       <Header />
+
       <Container>
+
         {data.map((item, index) => {
           return <Card {...item} key={index} />;
         })}
+
       </Container>
+      
       <Footer />
     </ThemeProvider>
-    
+
   );
 };
 
