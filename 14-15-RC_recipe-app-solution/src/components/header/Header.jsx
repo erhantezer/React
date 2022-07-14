@@ -1,8 +1,39 @@
-import HeaderStyle from './Header.style'
+import {FoodInput, FormContainer, HeaderContainer, MainHeader,Button, Select} from './Header.style'
 
-const Header = () => {
+const Header = ({setQuery,setSelectedMeal,mealType,getData}) => {
+
+const handleSubmit = (e) =>{
+e.preventDefault();
+getData()
+}
+
+
   return (
-    <div>Header</div>
+    <HeaderContainer>
+      <MainHeader>
+        Recipe App
+      </MainHeader>
+      <FormContainer onSubmit={handleSubmit}>
+        <FoodInput 
+        type="text" 
+        placeholder='search'
+        onChange={(e) => setQuery(e.target.value)}
+        />
+
+        <Button type="submit">SEARCH</Button>
+        <Select 
+        name='mealType' 
+        id='mealType'
+        onChange={(e)=>setSelectedMeal(e.target.meal)}
+        >
+          {mealType.map((meal,index)=>{
+            return(
+              <option key={index} value={meal.toLowerCase()}>{meal}</option>
+            )
+          })}
+        </Select>
+      </FormContainer>
+    </HeaderContainer>
   )
 }
 
