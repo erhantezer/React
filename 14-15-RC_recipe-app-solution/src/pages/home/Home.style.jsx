@@ -16,3 +16,5 @@ export const HeaderText = styled.h1`
   color: red;
   text-align: center;
 `;
+const APP_ID ="f6edb9f6";
+const APP_KEY ="4ab957a75da653a00a88eb87864b8139";
