@@ -41,7 +41,7 @@ const Main = () => {
 
   return (
     <>
-    <div className="text-center d-flex justify-content-center align-items-center">
+    
       <form className="search" onSubmit={handleSubmit}>
         <input
           type="search"
@@ -51,7 +51,7 @@ const Main = () => {
         />
         <button type="submit" className="btn btn-info mb-1 text-white fw-bold">Search</button>
       </form>
-      <div className="d-flex justify-content-center align-items-center">
+      <div className="d-flex justify-content-center  flex-wrap">
         {loading ? (
           <div class="spinner-border" style={{width: "3rem", height: "3rem"}} role="status">
           <span class="visually-hidden">Loading...</span>
@@ -60,7 +60,7 @@ const Main = () => {
           movies?.map((movie) => <MovieCard key={movie.id} {...movie}/> )
         )}
       </div>
-    </div>
+    
 
     </>
   );
