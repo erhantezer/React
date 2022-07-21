@@ -25,16 +25,16 @@
 // export default reducer;
 
 
-import { createStore, combineReducers } from "redux";
-import counterReducer from "./reducers/counterReducer";
-import todoReducer from "./reducers/todoReducers";
+import { createStore, combineReducers } from 'redux';
+import counterReducer from './reducers/counterReducer';
+import todoReducer from './reducers/todoReducers';
 
 const rootReducer = combineReducers({
-counterReducer: counterReducer,
-todoReducer:todoReducer,
+  counterRed: counterReducer,
+  todoRed: todoReducer,
 });
 
-export const combinedStore = () => {
-    const store = createStore(rootReducer)
-    return store;
-}
+export const getStore = () => {
+  const store = createStore(rootReducer);
+  return store;
+};
