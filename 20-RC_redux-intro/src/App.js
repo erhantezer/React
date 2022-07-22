@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import { getStore } from './redux';
 
 function App() {
+  //? reducer klasör içinde oluşturduk
   // const store = createStore(reducer);
   const store = getStore();
   return (
