@@ -11,6 +11,7 @@ const Counter = () => {
       <h2 className="counter-header">Counter With Redux</h2>
       <h1>{counter}</h1>
       <div>
+        
         <button
           className="counter-button positive"
           // onClick={() => dispatch({ type: 'INCREMENT' })}
@@ -18,7 +19,7 @@ const Counter = () => {
         >
           increase
         </button>
-        
+
         <button className="counter-button zero"
         // onClick={() => dispatch({ type: 'RESET' })}
         onClick={() => dispatch(reset())}
