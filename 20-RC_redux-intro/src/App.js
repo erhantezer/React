@@ -13,9 +13,11 @@ function App() {
   const store = getStore();
   return (
     <div className="app">
+
       <Provider store={store}>
         {/* <Counter /> */}
         <Todo />
+        
       </Provider>
     </div>
   );
