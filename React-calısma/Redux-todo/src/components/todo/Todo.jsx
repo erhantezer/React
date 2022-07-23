@@ -1,8 +1,14 @@
-import React from 'react'
+import "./Todo.css"
+import TodoInput from "./TodoInput"
+import TodoList from "./TodoList"
 
 const Todo = () => {
   return (
-    <div>Todo</div>
+    <div className="app">
+        <h1>Todo With Redux</h1>
+        <TodoInput/>
+        <TodoList/>
+    </div>
   )
 }
 
