@@ -4,6 +4,7 @@ import {increment, reset, decrement} from '../../redux/actions/counterActioans.j
 
 //? UI kısmı
 const Counter = () => {
+  
   const dispatch = useDispatch();
   // const counter = useSelector(state => state.counter)
   const counter = useSelector(state => state.counterRed.counter)
