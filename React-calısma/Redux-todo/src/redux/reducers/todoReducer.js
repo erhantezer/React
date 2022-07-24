@@ -5,7 +5,7 @@ const initialState = {
     todoList : [
         {id: new Date().getTime(), text:"Work On Redux", completed: true},
     ],
-    byIds: {}
+    
 };
 
 // rxreducer
@@ -21,9 +21,7 @@ const todoReducer = (state = initialState, { type, payload }) => {
     }
   case TOGGLE_TODO:
     
-    return { 
-   
-     }
+    return { ...state, ...payload }
 
   case DELETE_TODO:
     return { ...state, ...payload }
