@@ -1,9 +1,11 @@
 import React from 'react'
 import okLogo from "../../assets/ok.png";
 import deleteLogo from "../../assets/delete.png";
+import { useDispatch } from 'react-redux';
+import { deleteTodo, toggleTodo } from '../../redux/actions/todoAction';
 
 const TodoItem = ({completed, text, id}) => {
-
+const dispatch = useDispatch();
 
 const styled ={
 
@@ -12,6 +14,14 @@ const styled ={
     borderRadius: "5px",
 };
 
+
+const handleToggle = () => {
+    dispatch(toggleTodo())
+}
+
+const handleDelete = () => {
+    dispatch(deleteTodo())
+}
 
   return (
     <div style={styled} className="todo-list" key={id}>
@@ -22,7 +32,7 @@ const styled ={
                 src={okLogo} 
                 alt="ok-logo" 
                 className='ok-logo'
-                // onClick={handleToggle}
+                onClick={handleToggle}
                 />
             </span>
             <span>
@@ -30,7 +40,7 @@ const styled ={
                 src={deleteLogo} 
                 alt="delete-logo" 
                 className='delete-logo'
-                // onClick={handleDelete}
+                onClick={handleDelete}
                 />
             </span>
         </div>
