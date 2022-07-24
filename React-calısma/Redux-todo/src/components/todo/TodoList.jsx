@@ -4,7 +4,10 @@ import TodoItem from './TodoItem'
 const TodoList = () => {
 
 
-    
+    const handleClear = () => {
+        
+    }
+
   return (
     <div>
 
@@ -17,7 +20,7 @@ const TodoList = () => {
         </div>
 
         <div className='clear-wrapper'>
-            <button className='clear-button'>
+            <button className='clear-button' onClick={handleClear}>
                 Clear
             </button>
         </div>
