@@ -1,15 +1,18 @@
 import { Link, Avatar, Box, Button, Container, TextField, Typography } from '@mui/material'
 import { useState } from 'react';
-
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom'
+import { setUser } from '../features/authSlice';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(setUser({email,password}))
     setEmail('');
     setPassword('');
     navigate('/');
