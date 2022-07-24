@@ -1,5 +1,5 @@
 import { Navigate, Outlet } from "react-router-dom"
-const user ="";
+const user ="erhan";
 
 const PrivateRouter = () => {
 
