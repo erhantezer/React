@@ -36,7 +36,7 @@ const News = () => {
         >
          {newsList?.map((item,index) => (
           
-          <Card sx={{ maxWidth: 345, m: 5, maxHeight: 600 }} key={index}>
+          <Card sx={{ maxWidth: 345, mt: 10, mr:8 , maxHeight: 600 }} key={index}>
           <CardMedia
             component="img"
             height="250"

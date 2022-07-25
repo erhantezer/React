@@ -1,10 +1,10 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const initialState = {
-  newList: [],
-  loading: true
-}
+  newsList: [],
+  loading: true,
+};
 
 //? State'lerin API gibi async kaynaklardan gelen verilere gore guncellenmesi gerekebilir.
 //? Ancak boyle bir durumda async islem tamamlandiktan sonra state guncellenmelidir.
@@ -15,25 +15,24 @@ const initialState = {
 //! Thunk'ın amaci reducers'a islenmis sonuclari gondermeden once gecikmeli asenkron ismlerinin yurutulmesini saglamaktir.
 
 const API_KEY ="44e23dc79f324a2380981ce37f159336";
-// const API_KEY = '02d142c50d8b4247b974b25323435174';
-
 
 export const getNews = createAsyncThunk(
-  'news/getNews', //!actioan type ismi
-  //! async callback fun
+  'news/getNews', //! action type ismi
+
+  //! async callback fun.
   async () => {
     const url = `https://newsapi.org/v2/top-headlines?country=tr&apiKey=${API_KEY}`;
     try {
-      const {data} = await axios.get(url);
+      const { data } = await axios(url);
       return data.articles;
     } catch (error) {
       console.log(error);
     }
   }
-)
+);
 
 const newsSlice = createSlice({
-  name:"news",
+  name: 'news',
   initialState,
   reducers: {
     clearNewsList: (state) => {
@@ -41,23 +40,23 @@ const newsSlice = createSlice({
     },
   },
   extraReducers: {
-    [getNews.pending]: (state) => {
+    [getNews.pending]: (state, action) => {
       state.loading = true;
     },
-    [getNews.fulfilled]: (state, {payload}) => {
-      state.loading=false;
-      state.newList = payload;
+    [getNews.fulfilled]: (state, { payload }) => {
+      state.loading = false;
+      state.newsList = payload;
     },
     [getNews.rejected]: (state) => {
       state.loading = false;
     },
   },
 });
-  //! baska slice'lardaki tanimlanan action'lara cevap vermek
+
+//! baska slice'lardaki tanimlanan action'lara cevap vermek
 //! bilhassa createAsyncThunk tarafindan olusturulan action'lara
 //! cevap vermek icin kullanilir.
 
 export const { clearNewsList } = newsSlice.actions;
 
-
-export default newsSlice.reducer
+export default newsSlice.reducer;
