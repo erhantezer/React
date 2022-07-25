@@ -58,4 +58,4 @@ const newsSlice = createSlice({
 export const { clearNewsList } = newsSlice.actions;
 
 
-export default newsSlice
+export default newsSlice.reducer
