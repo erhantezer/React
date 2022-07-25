@@ -8,15 +8,15 @@ import {
   signOut,
 } from "firebase/auth";
 
-const app = initializeApp({
-  apiKey: process.env.REACT_APP_FIREBASE_apiKey,
-  authDomain: process.env.REACT_APP_FIREBASE_authDomain,
-  databaseURL: process.env.REACT_APP_FIREBASE_databaseURL,
-  projectId: process.env.REACT_APP_FIREBASE_projectId,
-  storageBucket: process.env.REACT_APP_FIREBASE_storageBucket,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_messagingSenderId,
-  appId: process.env.REACT_APP_FIREBASE_appId,
-});
+const firebaseConfig = {
+  apiKey: "AIzaSyBzHp3M349pdG_CfgdTp1DPetATuIC-kRI",
+  authDomain: "react-firebase-43904.firebaseapp.com",
+  projectId: "react-firebase-43904",
+  storageBucket: "react-firebase-43904.appspot.com",
+  messagingSenderId: "45323005435",
+  appId: "1:45323005435:web:66eb7fb8b8b2da244cef5e"
+};
+const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
