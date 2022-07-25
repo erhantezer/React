@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  user:""
+  user:"",
 }
 
 //? createSlice, Redux state lojiğini kisa yoldan tanimlamak icin kullanilan bir metotdur.
@@ -25,4 +25,5 @@ const authSlice = createSlice({
 //? actions toolkit özelliğidir createSlice ile gelir
 export const  { setUser, clearUser } = authSlice.actions;
 
-export default authSlice
+//? Export olayı önemli reducer yazmayı unutma
+export default authSlice.reducer
