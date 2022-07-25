@@ -1,11 +1,22 @@
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
 import loadingGif from "../assets/loading.gif"
-
+import {useDispatch, useSelector} from 'react-redux'
+import { useEffect } from 'react';
+import { clearNewsList, getNews } from '../features/newsSlice';
 
 const News = () => {
+  const dispatch = useDispatch();
+  const {newsList, loading} = useSelector((state) => state.news);
+
+  useEffect(()=> {
+    dispatch(getNews());
+    return () => {
+      dispatch(clearNewsList());
+    };
+  }, [dispatch]);
   return (
     <div>
-      <Box
+      {loading && ( <Box
       display= "flex"
       alignItems="center"
       justifyContent="center"
@@ -13,6 +24,9 @@ const News = () => {
       >
         <img src={loadingGif} alt="gif" width="90%" height="800px" />
       </Box>
+      )}
+     
+     {!loading && (
       <Box
           xs={{ d: 'flex' }}
           display="flex"
@@ -20,7 +34,7 @@ const News = () => {
           justifyContent="space-evenly"
           flexWrap="wrap"
         >
-         {[].map((item,index) => (
+         {newsList?.map((item,index) => (
           
           <Card sx={{ maxWidth: 345, m: 5, maxHeight: 600 }} key={index}>
           <CardMedia
@@ -45,7 +59,8 @@ const News = () => {
           </CardActions>
         </Card>
          ))} 
-        </Box>
+      </Box> )}
+      
 
     </div>
   )
