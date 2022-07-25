@@ -22,7 +22,7 @@ export const getNews = createAsyncThunk(
   'news/getNews', //!actioan type ismi
   //! async callback fun
   async () => {
-    const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=tr&apiKey=${API_KEY}`;
     try {
       const {data} = await axios.get(url);
       return data.articles;
