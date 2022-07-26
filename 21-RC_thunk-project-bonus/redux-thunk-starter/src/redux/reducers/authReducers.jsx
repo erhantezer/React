@@ -11,7 +11,7 @@ const initialState = {
     return { ...state, currentUser: payload };
 
   case CLEAR_CURRENT_USER:
-    return { ...state, currentUser: payload };
+    return initialState.currentUser;
 
   default:
     return state;
