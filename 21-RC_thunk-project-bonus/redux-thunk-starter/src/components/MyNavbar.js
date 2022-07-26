@@ -1,7 +1,7 @@
-import React from "react";
+
 import { useNavigate } from "react-router-dom";
 import { logout } from "../utils/firebaseUtil";
-
+import { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -11,12 +11,17 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
+import { useDispatch, useSelector } from "react-redux";
+import { clearCurrentUser } from "../redux/actions/authActions";
+
 
 const MyNavbar = () => {
   const navigate = useNavigate();
-  const currentUser = true;
+ const dispatch =useDispatch()
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const {currentUser} =useSelector((state) => state.auth);
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -30,6 +35,7 @@ const MyNavbar = () => {
   const handleLogout = () => {
     setAnchorEl(null);
     logout();
+    dispatch(clearCurrentUser())
   };
 
   const handleRegister = () => {
