@@ -1,6 +1,9 @@
 function App() {
   return (
-    <div>
+    <div className="container">
+      <div className="row">
+
+      </div>
       
     </div>
   );
