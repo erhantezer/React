@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "@mui/styles": "^5.9.1"
+    "@mui/styles": "^5.9.1",
+    "bootstrap": "5.2.0-beta1",
+    "react-icons": "^4.4.0"
   }
 }
