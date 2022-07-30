@@ -1,6 +1,7 @@
 import {toast} from "react-toastify";
 
 export const Toastify = (msg) => {
+    
     toast(msg, {
         position: "top-right",
         autoClose: 3000,
