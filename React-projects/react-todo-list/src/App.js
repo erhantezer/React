@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Todos from "./components/Todos";
+import toastifySuccess from "./utils/toastify";
 
 
 
@@ -10,7 +11,14 @@ const [allInput, setAllInput] = useState(JSON.parse(localStorage.getItem("Tasks"
 
 
 const handleClick = () => {
-setAllInput([...allInput, input])
+  if(input !== ""){
+    setAllInput([...allInput, input]);
+    toastifySuccess("Todo added")
+  }else {
+    toastifySuccess("Please enter a text")
+  }
+
+setInput("")
 }
 // console.log(allInput);
 
@@ -28,6 +36,23 @@ useEffect(() => {
 
 
 //* silme işlemi
+const handleDelete = (id) => {
+  const filterItems = allInput.filter((item,index) => {
+    return id !== index
+  })
+  setAllInput(filterItems)
+  toastifySuccess("Deleted successful")
+}
+
+
+//* edit işlemi 
+const handleEdit = (id) => {
+  const filterItem = allInput.filter((item,index) => {
+    return id === index
+  })
+setInput(filterItem);
+handleDelete(id)
+}
 
 
   return (
@@ -41,6 +66,7 @@ useEffect(() => {
           type="text" 
           className="form-control text-capitalize mt-1"
           name="add-todo"
+          value={input}
           onChange={(e) => setInput(e.target.value)}
           />
           <button 
@@ -59,6 +85,8 @@ useEffect(() => {
               key={index}
               id={index}
               item={item}
+              handleDelete={handleDelete}
+              handleEdit={handleEdit}
               />
             )
           })}
