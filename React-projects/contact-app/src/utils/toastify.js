@@ -1,8 +1,8 @@
 import {toast} from "react-toastify";
 
-export const Toastify = (msg) => {
+const Toastify = (msg) => {
     
-    toast(msg, {
+    toast.success(msg, {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
@@ -12,3 +12,4 @@ export const Toastify = (msg) => {
         progress: undefined,
         });
 }
+export default Toastify
