@@ -11,7 +11,7 @@ function App() {
   const [info, setInfo] = useState(initialValue);
   const [isAdd,setIsAdd]=useState("ADD")
   
-
+//? SADECE FORM İŞLEMİNİ BURDA YAPTIK
   const handleSubmit = (e) => {
    e.preventDefault();
    if(info.id){
@@ -24,6 +24,8 @@ function App() {
   setIsAdd("ADD")
   }
 
+
+  //? EDİT OLAYI YENİ BİR İNFO DEĞERİ OLUŞTURMAK VE BUNU FORMA AKTARMAKTIR
   const editUser=(id,username,phone,gender)=>{
     setIsAdd("UPDATE")
     setInfo({id,username,phone,gender})
