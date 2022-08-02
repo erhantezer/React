@@ -5,7 +5,7 @@ import Toastify from "./toastify"
 
 
 
-//? Firebase Bilgi ekleme
+//? Firebase Bilgi ekleme ( formda kullanıldı )
 export const AddUser = (info) => {
   //? firebase database açtık
     const db = getDatabase(firebase);
@@ -24,7 +24,7 @@ export const AddUser = (info) => {
     });
 }
 
-//? Bilgi Çağırma
+//? Bilgi Çağırma ( contact ta kullanıldı)
 export const useFetch = () => {
 //? eger bilgi gelmezse yada geç gelirse diye  state oluşturduk
     const [isLoading, setIsLoading] = useState();
@@ -53,13 +53,16 @@ export const useFetch = () => {
     
 }
 
-//? silme 
+
+//? silme database firebase ten silindi ( contact ta kullanıldı )
 export const DeleteUser=(id)=>{
   const db = getDatabase(firebase);
   remove(ref(db,"users/"+id));
   Toastify("Deleted Successfully")
 }
 
+
+//? tıklanınca güncelleme olcağından App.js ye gönderdik burası editten sonraki durumdur karıştırma
 export const UpdateUser=(info)=>{
   const db = getDatabase(firebase);
   const updates={}
